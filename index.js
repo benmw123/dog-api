@@ -11,17 +11,18 @@ function createDogImage(responseJson) {
   return `<img src="${responseJson.message}" class="results-img">`
 }
 
+
+
 function formListener() {
     $('form').submit(event => {
         event.preventDefault();
+        $('.results').empty(); 
         input = $('#dogAmount').val(); 
         console.log(input); 
         for (i=1; i <= input; i++) {
           getDogImage();
         }
-        
     });
-
 }
 
 $(function() {
