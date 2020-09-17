@@ -11,13 +11,13 @@ console.log(responseJson);
 return `<img src="${responseJson.message}" class="results-img">`
 }
 
-
-
 function formListener() {
   $('form').submit(event => {
       event.preventDefault();
       $('.results').empty(); 
       input = $('#dogAmount').val(); 
+      if (input === "")
+        input = 3;  
       console.log(input); 
       for (i=1; i <= input; i++) {
         getDogImage();
