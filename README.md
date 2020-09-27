@@ -1,3 +1,3 @@
-This Web app generates a random image of the selected breed.
+This Web app generates dog images based on user input
 
 Author: Ben Whitehurst
